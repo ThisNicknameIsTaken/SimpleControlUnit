@@ -6,7 +6,7 @@ output  reg  [7:0] out;
 
 always @*
     case (code)
-        3'd0: out = 8'b0000_0000;
+        3'd0: out = 8'b0000_0001;
         3'd1: out = 8'b0000_0010;
         3'd2: out = 8'b0000_0100;
         3'd3: out = 8'b0000_1000;
