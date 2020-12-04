@@ -7,14 +7,14 @@ input Resetn;
 
 reg run_r;
 
-output [3:0] regout;
+output [4:0] regout;
 
 output [15:0] bus;
 output wire Done;
 
 wire [15:0] D;
 
-reg  [3:0] counter;
+reg  [4:0] counter;
 
 
 assign regout = counter;

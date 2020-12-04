@@ -12,7 +12,7 @@ wire Done;
 wire [15:0] bus;
 
 
-wire [3:0] counter;
+wire [4:0] counter;
 
 MCU mcu(Mclk, Pclk,Resetn,Run,Done,bus,counter);
 
@@ -44,8 +44,9 @@ end
 
 
 always @(counter) begin
-    if(&counter)
-            $finish;
+    if(counter+1 == 24) begin
+        $finish;
+    end
 end
 
 endmodule

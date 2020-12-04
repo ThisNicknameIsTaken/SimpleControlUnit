@@ -15,7 +15,6 @@ reg  [15:0] bus;
 
 reg [15:0] alu;
 
-wire enableALU;
 wire [15:0] alu_w;
 wire [15:0] bus_to_alu;
 
@@ -65,7 +64,6 @@ CU control_unit(.clk(clk),
                 .Gout(Gout),
                 .DINout(DINout),
                 .AddSub(AddSub),
-                .enableALU(enableALU),
                 .Done(Done)
                 );
     
@@ -81,12 +79,10 @@ always @(R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, Gout, DINout)
     mux_control <= {DINout,Gout, R7out, R6out, R5out, R4out, R3out, R2out, R1out, R0out};
 
 always @(*) begin
- 
         if(AddSub == 1'b0)
             alu = (alu_w + bus_to_alu);
         else 
-            alu = (alu_w - bus_to_alu);
-   
+          alu = (alu_w - bus_to_alu);
 end
 
 always @(posedge clk, mux_control) begin

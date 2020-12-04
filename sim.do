@@ -21,6 +21,7 @@ vsim -t 1ns -voptargs="+acc" work.MCU_test
 
 add wave /MCU_test/Resetn
 add wave /MCU_test/Mclk
+add wave /MCU_test/counter
 add wave /MCU_test/mcu/counter
 add wave /MCU_test/mcu/memory/data
 add wave /MCU_test/Pclk

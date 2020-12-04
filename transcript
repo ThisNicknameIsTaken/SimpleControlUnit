@@ -1,7 +1,7 @@
 # Reading pref.tcl
 # do sim.do
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:55:52 on Dec 04,2020
+# Start time: 00:30:01 on Dec 05,2020
 # vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
 # -- Compiling module MCU
 # -- Compiling module SCU
@@ -13,10 +13,10 @@
 # 
 # Top level modules:
 # 	MCU_test
-# End time: 20:55:53 on Dec 04,2020, Elapsed time: 0:00:01
+# End time: 00:30:02 on Dec 05,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 20:55:53 on Dec 04,2020
+# Start time: 00:30:02 on Dec 05,2020
 # Loading work.MCU_test
 # Loading work.MCU
 # Loading work.rom
@@ -24,19 +24,11 @@
 # Loading work.Register
 # Loading work.CU
 # Loading work.decoder
-# ** Warning: (vsim-PLI-3407) Too many data words read on line 17 of file "memory_data.txt". (Current address [16], address range [0:15])    : rom.v(9)
-#    Time: 0 ns  Iteration: 0  Instance: /MCU_test/mcu/memory
-# ** Note: $finish    : MCU_test.v(48)
-#    Time: 1260 ns  Iteration: 4  Instance: /MCU_test
-# 1
-# Break in Module MCU_test at MCU_test.v line 48
 # 0 ns
-# 1323 ns
+# 7045726 ns
 do sim.do
-# Error 31: Unable to unlink file "D:/ModelSim/Projects/Lab8/work/_lib.qdb".
-# Error 133: Unable to remove directory "D:/ModelSim/Projects/Lab8/work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:10:05 on Dec 04,2020
+# Start time: 00:31:54 on Dec 05,2020
 # vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
 # -- Compiling module MCU
 # -- Compiling module SCU
@@ -48,12 +40,101 @@ do sim.do
 # 
 # Top level modules:
 # 	MCU_test
-# End time: 21:10:05 on Dec 04,2020, Elapsed time: 0:00:00
+# End time: 00:31:55 on Dec 05,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# End time: 21:10:07 on Dec 04,2020, Elapsed time: 0:14:14
+# End time: 00:31:58 on Dec 05,2020, Elapsed time: 0:01:56
+# Errors: 0, Warnings: 0
+# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
+# Start time: 00:31:58 on Dec 05,2020
+# Loading work.MCU_test
+# Loading work.MCU
+# Loading work.rom
+# Loading work.SCU
+# Loading work.Register
+# Loading work.CU
+# Loading work.decoder
+# 0 ns
+# 24625162 ns
+do sim.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:33:55 on Dec 05,2020
+# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
+# -- Compiling module MCU
+# -- Compiling module SCU
+# -- Compiling module rom
+# -- Compiling module decoder
+# -- Compiling module Register
+# -- Compiling module CU
+# -- Compiling module MCU_test
+# 
+# Top level modules:
+# 	MCU_test
+# End time: 00:33:55 on Dec 05,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 00:33:59 on Dec 05,2020, Elapsed time: 0:02:01
+# Errors: 0, Warnings: 0
+# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
+# Start time: 00:33:59 on Dec 05,2020
+# Loading work.MCU_test
+# Loading work.MCU
+# Loading work.rom
+# Loading work.SCU
+# Loading work.Register
+# Loading work.CU
+# Loading work.decoder
+# 0 ns
+# 8721615 ns
+do sim.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:34:43 on Dec 05,2020
+# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
+# -- Compiling module MCU
+# -- Compiling module SCU
+# -- Compiling module rom
+# -- Compiling module decoder
+# -- Compiling module Register
+# -- Compiling module CU
+# -- Compiling module MCU_test
+# 
+# Top level modules:
+# 	MCU_test
+# End time: 00:34:43 on Dec 05,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 00:34:48 on Dec 05,2020, Elapsed time: 0:00:49
+# Errors: 0, Warnings: 0
+# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
+# Start time: 00:34:48 on Dec 05,2020
+# Loading work.MCU_test
+# Loading work.MCU
+# Loading work.rom
+# Loading work.SCU
+# Loading work.Register
+# Loading work.CU
+# Loading work.decoder
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'regout'. The port definition is at: MCU.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /MCU_test/mcu File: MCU_test.v Line: 17
+# 0 ns
+# 144230300 ns
+do sim.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:37:01 on Dec 05,2020
+# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
+# -- Compiling module MCU
+# -- Compiling module SCU
+# -- Compiling module rom
+# -- Compiling module decoder
+# -- Compiling module Register
+# -- Compiling module CU
+# -- Compiling module MCU_test
+# 
+# Top level modules:
+# 	MCU_test
+# End time: 00:37:01 on Dec 05,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 00:37:05 on Dec 05,2020, Elapsed time: 0:02:17
 # Errors: 0, Warnings: 1
 # vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 21:10:07 on Dec 04,2020
+# Start time: 00:37:05 on Dec 05,2020
 # Loading work.MCU_test
 # Loading work.MCU
 # Loading work.rom
@@ -62,1017 +143,6 @@ do sim.do
 # Loading work.CU
 # Loading work.decoder
 # ** Note: $finish    : MCU_test.v(48)
-#    Time: 1420 ns  Iteration: 4  Instance: /MCU_test
+#    Time: 1620 ns  Iteration: 4  Instance: /MCU_test
 # 1
 # Break in Module MCU_test at MCU_test.v line 48
-# 0 ns
-# 1491 ns
-do sim.do
-# Error 31: Unable to unlink file "D:/ModelSim/Projects/Lab8/work/_lib1_0.qpg".
-# Error 31: Unable to unlink file "D:/ModelSim/Projects/Lab8/work/_lib1_0.qtl".
-# Error 133: Unable to remove directory "D:/ModelSim/Projects/Lab8/work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:15:43 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# ** Error: (vlog-13069) CU.v(68): near "end": syntax error, unexpected end, expecting ';'.
-# ** Error: (vlog-13025) CU.v(86): near ":": Syntax error. Statement labels are only allowed in SystemVerilog.
-# ** Error: CU.v(99): A label for a block can be specified before 'begin' only in SystemVerilog.
-# ** Error: (vlog-13069) CU.v(99): near "<=": syntax error, unexpected <=.
-# ** Error: CU.v(99): (vlog-13205) Syntax error found in the scope following 'reg_control'. Is there a missing '::'?
-# -- Compiling module MCU_test
-# End time: 21:15:44 on Dec 04,2020, Elapsed time: 0:00:01
-# Errors: 5, Warnings: 0
-# ** Error: D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./sim.do line 14
-# D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v"
-do sim.do
-# Error 31: Unable to unlink file "D:/ModelSim/Projects/Lab8/work/_lib1_0.qpg".
-# Error 31: Unable to unlink file "D:/ModelSim/Projects/Lab8/work/_lib1_0.qtl".
-# Error 133: Unable to remove directory "D:/ModelSim/Projects/Lab8/work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:08 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 21:16:08 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 21:16:09 on Dec 04,2020, Elapsed time: 0:06:02
-# Errors: 1, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 21:16:09 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# 0 ns
-# 86467017 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:20:33 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 21:20:33 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 21:20:37 on Dec 04,2020, Elapsed time: 0:04:28
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 21:20:37 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# 0 ns
-# 98757493 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:24:09 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 21:24:09 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 21:24:12 on Dec 04,2020, Elapsed time: 0:03:35
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 21:24:12 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# 0 ns
-# 8946341 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:25:55 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 21:25:55 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 21:25:59 on Dec 04,2020, Elapsed time: 0:01:47
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 21:25:59 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# 0 ns
-# 2630875 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:30:26 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 21:30:27 on Dec 04,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# End time: 21:30:30 on Dec 04,2020, Elapsed time: 0:04:31
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 21:30:30 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# 0 ns
-# 7330344 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:35:20 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 21:35:20 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 21:35:24 on Dec 04,2020, Elapsed time: 0:04:54
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 21:35:24 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# 0 ns
-# 3397868 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:37:22 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 21:37:22 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 21:37:25 on Dec 04,2020, Elapsed time: 0:02:01
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 21:37:25 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# ** Note: $finish    : MCU_test.v(48)
-#    Time: 1420 ns  Iteration: 4  Instance: /MCU_test
-# 1
-# Break in Module MCU_test at MCU_test.v line 48
-# 0 ns
-# 1491 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:41:21 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 21:41:21 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 21:41:25 on Dec 04,2020, Elapsed time: 0:04:00
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 21:41:25 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# 0 ns
-# 27415710 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:47:25 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 21:47:25 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 21:47:29 on Dec 04,2020, Elapsed time: 0:06:04
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 21:47:29 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# ** Note: $finish    : MCU_test.v(48)
-#    Time: 1420 ns  Iteration: 4  Instance: /MCU_test
-# 1
-# Break in Module MCU_test at MCU_test.v line 48
-# 0 ns
-# 1491 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:56:39 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 21:56:39 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 21:56:44 on Dec 04,2020, Elapsed time: 0:09:15
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 21:56:44 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# 0 ns
-# 3805389 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:58:03 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# ** Error: CU.v(64): (vlog-2730) Undefined variable: 'preload'.
-# -- Compiling module MCU_test
-# End time: 21:58:04 on Dec 04,2020, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-# ** Error: D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./sim.do line 14
-# D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v"
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:58:38 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 21:58:38 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 21:58:44 on Dec 04,2020, Elapsed time: 0:02:00
-# Errors: 1, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 21:58:44 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# ** Note: $finish    : MCU_test.v(48)
-#    Time: 900 ns  Iteration: 3  Instance: /MCU_test
-# 1
-# Break in Module MCU_test at MCU_test.v line 48
-# 0 ns
-# 945 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:59:42 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 21:59:42 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 21:59:46 on Dec 04,2020, Elapsed time: 0:01:02
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 21:59:46 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# 0 ns
-# 2369787 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:01:48 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 22:01:48 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 22:01:52 on Dec 04,2020, Elapsed time: 0:02:06
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 22:01:52 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# 0 ns
-# 1483298 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:11:11 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 22:11:11 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 22:11:15 on Dec 04,2020, Elapsed time: 0:09:23
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 22:11:15 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# 0 ns
-# 5823048 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:35 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 22:20:35 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 22:20:40 on Dec 04,2020, Elapsed time: 0:09:25
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 22:20:40 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# 0 ns
-# 1891832 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:23:33 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 22:23:33 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 22:23:37 on Dec 04,2020, Elapsed time: 0:02:57
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 22:23:37 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# Control-C interrupt
-# 
-# MACRO ./sim.do PAUSED at line 83
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:28:05 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 22:28:05 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 22:28:09 on Dec 04,2020, Elapsed time: 0:04:32
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 22:28:09 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# 0 ns
-# 4763246 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:29:36 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 22:29:36 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 22:29:40 on Dec 04,2020, Elapsed time: 0:01:31
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 22:29:40 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# ** Note: $finish    : MCU_test.v(48)
-#    Time: 1220 ns  Iteration: 3  Instance: /MCU_test
-# 1
-# Break in Module MCU_test at MCU_test.v line 48
-# 0 ns
-# 1281 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:02:02 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# ** Error: CU.v(56): (vlog-2730) Undefined variable: 'state'.
-# ** Error: (vlog-13069) CU.v(61): near "(": syntax error, unexpected '('.
-# ** Error: CU.v(83): (vlog-13205) Syntax error found in the scope following 'mul_control'. Is there a missing '::'?
-# -- Compiling module MCU_test
-# End time: 23:02:03 on Dec 04,2020, Elapsed time: 0:00:01
-# Errors: 3, Warnings: 0
-# ** Error: D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./sim.do line 14
-# D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v"
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:02:29 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# ** Error: CU.v(56): (vlog-2730) Undefined variable: 'state'.
-# ** Error: (vlog-13069) CU.v(61): near "(": syntax error, unexpected '('.
-# ** Error: CU.v(83): (vlog-13205) Syntax error found in the scope following 'mul_control'. Is there a missing '::'?
-# -- Compiling module MCU_test
-# End time: 23:02:29 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-# ** Error: D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./sim.do line 14
-# D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v"
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:11 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# ** Error: (vlog-13069) CU.v(54): near "(": syntax error, unexpected '('.
-# ** Error: CU.v(57): (vlog-13205) Syntax error found in the scope following 'Done'. Is there a missing '::'?
-# -- Compiling module MCU_test
-# End time: 23:03:11 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# ** Error: D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./sim.do line 14
-# D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v"
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:25 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# ** Error: CU.v(58): A begin/end block was found with an empty body.  This is permitted in SystemVerilog, but not permitted in Verilog.  Please look for any stray semicolons.
-# ** Error: (vlog-13069) CU.v(62): near "end": syntax error, unexpected end, expecting ';'.
-# ** Error: (vlog-13069) CU.v(89): near "end": syntax error, unexpected end, expecting ';'.
-# ** Error: CU.v(107): A label for a block can be specified before 'begin' only in SystemVerilog.
-# ** Error: (vlog-13069) CU.v(107): near "<=": syntax error, unexpected <=.
-# ** Error: CU.v(107): (vlog-13205) Syntax error found in the scope following 'reg_control'. Is there a missing '::'?
-# -- Compiling module MCU_test
-# End time: 23:03:25 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 6, Warnings: 0
-# ** Error: D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./sim.do line 14
-# D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v"
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:04:00 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# ** Error: (vlog-13069) CU.v(62): near "end": syntax error, unexpected end, expecting ';'.
-# ** Error: (vlog-13069) CU.v(89): near "end": syntax error, unexpected end, expecting ';'.
-# ** Error: CU.v(107): A label for a block can be specified before 'begin' only in SystemVerilog.
-# ** Error: (vlog-13069) CU.v(107): near "<=": syntax error, unexpected <=.
-# ** Error: CU.v(107): (vlog-13205) Syntax error found in the scope following 'reg_control'. Is there a missing '::'?
-# -- Compiling module MCU_test
-# End time: 23:04:00 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 5, Warnings: 0
-# ** Error: D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./sim.do line 14
-# D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v"
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:04:10 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# ** Error: (vlog-13069) CU.v(89): near "end": syntax error, unexpected end, expecting ';'.
-# -- Compiling module MCU_test
-# End time: 23:04:10 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./sim.do line 14
-# D:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v"
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:04:20 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 23:04:20 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 23:04:24 on Dec 04,2020, Elapsed time: 0:34:44
-# Errors: 6, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 23:04:24 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# ** UI-Msg: (vish-4014) No objects found matching '/MCU_test/mcu/scu/control_unit/state'.
-# Error in macro ./sim.do line 33
-# ** UI-Msg: (vish-4014) No objects found matching '/MCU_test/mcu/scu/control_unit/state'.
-#     while executing
-# "add wave /MCU_test/mcu/scu/control_unit/state"
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:05:15 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 23:05:15 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 23:05:21 on Dec 04,2020, Elapsed time: 0:00:57
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 23:05:21 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# 0 ns
-# 1068265 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:07:54 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 23:07:54 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 23:07:58 on Dec 04,2020, Elapsed time: 0:02:37
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 23:07:58 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# ** Note: $finish    : MCU_test.v(48)
-#    Time: 1140 ns  Iteration: 4  Instance: /MCU_test
-# 1
-# Break in Module MCU_test at MCU_test.v line 48
-# 0 ns
-# 1197 ns
-# WARNING: No extended dataflow license exists
-# dfAddDataflowFromWave: invalid command name ".main_pane.dataflow.interior.cs.body.pw.df.c"
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:27:57 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 23:27:57 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 23:28:02 on Dec 04,2020, Elapsed time: 0:20:04
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 23:28:02 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# ** Note: $finish    : MCU_test.v(48)
-#    Time: 1140 ns  Iteration: 4  Instance: /MCU_test
-# 1
-# Break in Module MCU_test at MCU_test.v line 48
-# 0 ns
-# 1197 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:36:46 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 23:36:47 on Dec 04,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# End time: 23:36:52 on Dec 04,2020, Elapsed time: 0:08:50
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 23:36:52 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# ** Note: $finish    : MCU_test.v(48)
-#    Time: 1140 ns  Iteration: 4  Instance: /MCU_test
-# 1
-# Break in Module MCU_test at MCU_test.v line 48
-# 0 ns
-# 1197 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:38:41 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 23:38:41 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 23:38:46 on Dec 04,2020, Elapsed time: 0:01:54
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 23:38:46 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# ** Note: $finish    : MCU_test.v(48)
-#    Time: 1140 ns  Iteration: 4  Instance: /MCU_test
-# 1
-# Break in Module MCU_test at MCU_test.v line 48
-# 0 ns
-# 1197 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:43:22 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 23:43:22 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 23:43:27 on Dec 04,2020, Elapsed time: 0:04:41
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 23:43:27 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# ** Note: $finish    : MCU_test.v(48)
-#    Time: 1140 ns  Iteration: 4  Instance: /MCU_test
-# 1
-# Break in Module MCU_test at MCU_test.v line 48
-# 0 ns
-# 1197 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:46:07 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 23:46:07 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 23:46:14 on Dec 04,2020, Elapsed time: 0:02:47
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 23:46:14 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# ** Note: $finish    : MCU_test.v(48)
-#    Time: 1140 ns  Iteration: 4  Instance: /MCU_test
-# 1
-# Break in Module MCU_test at MCU_test.v line 48
-# 0 ns
-# 1197 ns
-do sim.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:52:52 on Dec 04,2020
-# vlog -reportprogress 300 MCU.v SCU.v rom.v decoder.v Register.v CU.v MCU_test.v 
-# -- Compiling module MCU
-# -- Compiling module SCU
-# -- Compiling module rom
-# -- Compiling module decoder
-# -- Compiling module Register
-# -- Compiling module CU
-# -- Compiling module MCU_test
-# 
-# Top level modules:
-# 	MCU_test
-# End time: 23:52:52 on Dec 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 23:52:57 on Dec 04,2020, Elapsed time: 0:06:43
-# Errors: 0, Warnings: 0
-# vsim -t 1ns -voptargs=""+acc"" work.MCU_test 
-# Start time: 23:52:57 on Dec 04,2020
-# Loading work.MCU_test
-# Loading work.MCU
-# Loading work.rom
-# Loading work.SCU
-# Loading work.Register
-# Loading work.CU
-# Loading work.decoder
-# ** Note: $finish    : MCU_test.v(48)
-#    Time: 1140 ns  Iteration: 4  Instance: /MCU_test
-# 1
-# Break in Module MCU_test at MCU_test.v line 48
-# 0 ns
-# 1197 ns

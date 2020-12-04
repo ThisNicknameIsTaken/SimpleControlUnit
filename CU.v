@@ -1,4 +1,4 @@
-module CU(clk, Run, Resetn, IR, IRin, R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in, Ain, Gin, R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, Gout, DINout, AddSub, enableALU, Done);
+module CU(clk, Run, Resetn, IR, IRin, R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in, Ain, Gin, R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, Gout, DINout, AddSub, Done);
 
 
 parameter [2:0]  idle = 0, load_command = 1, move = 2, movei = 3, ar_op_load_op1 = 4,ar_op_load_op2 = 5, ar_op_mov_res_done = 6; 
@@ -10,7 +10,7 @@ output     R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in, R0out, R1out, R2out, 
 output reg Done;   //add = 0, sub = 1;
 output reg Gout, DINout, Ain, Gin, IRin;
 output AddSub;
-output  reg enableALU;
+
 
 reg [7:0] mul_control;     //choose from which register read data
 reg [7:0] reg_control;     //choose to which register write data
@@ -81,8 +81,7 @@ always @(*) begin
                 DINout <= 1'b0;
                 Gout <= 1'b0;
                 Gin <= 1'b0;
-                Ain <= 1'b0;
-                enableALU <= 1'b0;     
+                Ain <= 1'b0;  
             
             if(Run)
                 next_state <= load_command;
@@ -128,7 +127,6 @@ always @(*) begin
                 Ain <= 1'b0;
                 mul_control <= op2_decoder_out;     // allows to read data from this reg
                 Gin <= 1'b1;                        // write to G
-                enableALU <= 1'b1;
                 next_state <= ar_op_mov_res_done;
         end
 
