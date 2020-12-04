@@ -59,6 +59,7 @@ always
 
 always @(posedge clk, posedge Run) begin
     if (Run && state == idle) begin
+        IRin <= 1'b1;
         state <= load_command;     
     end
 end
