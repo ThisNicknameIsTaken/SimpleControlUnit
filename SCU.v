@@ -1,4 +1,4 @@
-module SCU(clk, Run, Resetn, Din, Done, bus) begin
+module SCU(clk, Run, Resetn, Din, Done, bus_w);
     
 input clk, Run, Resetn;
 input [15:0] Din;
@@ -8,13 +8,15 @@ wire R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in, Ain, Gin;
 wire R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, Gout, DINout;
 wire AddSub;
 
-wire [15:0] mux_in[9];
+wire [15:0] mux_in[8:0];
 reg  [9:0]  mux_control;
+output [15:0] bus_w;
 reg  [15:0] bus;
 
 reg [15:0] alu;
 
-reg enableALU;
+wire enableALU;
+wire [15:0] alu_w;
 
 Register R0(clk, R0in, bus, mux_in[0]);
 Register R1(clk, R1in, bus, mux_in[1]);
@@ -24,14 +26,14 @@ Register R4(clk, R4in, bus, mux_in[4]);
 Register R5(clk, R5in, bus, mux_in[5]);
 Register R6(clk, R6in, bus, mux_in[6]);
 Register R7(clk, R7in, bus, mux_in[7]);
-Register A (clk, Ain,  bus, alu);
+Register A (clk, Ain,  bus, alu_w);
 Register G (clk, Gin,  alu, mux_in[8]);
 
+assign bus_w = bus;
 
-
-wire [8:0]  IR;
+reg [8:0]  IR;
 wire IRin;
-assign IR = Din[8:0];
+
 
 
 
@@ -39,7 +41,7 @@ CU control_unit(.clk(clk),
                 .Run(Run),
                 .Resetn(Resetn),
                 .IR(IR), 
-                .IRin(IRin)
+                .IRin(IRin),
                 .R0in(R0in),
                 .R1in(R1in),
                 .R2in(R2in),
@@ -67,19 +69,25 @@ CU control_unit(.clk(clk),
     
 
 
-always @(posedge clk)
-    mux_control <= {R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, Gout, Din};
+always @(posedge clk) begin
+    if(~IRin != 1'b0)
+        IR <= Din[8:0];
+end
 
-always (enableALU) begin
+
+always @(R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, Gout, DINout)
+    mux_control <= {DINout,Gout, R7out, R6out, R5out, R4out, R3out, R2out, R1out, R0out};
+
+always @(enableALU) begin
     if(enableALU) begin
         if(AddSub == 1'b0)
-            alu <= alu + bus;
+            alu <= alu_w + bus;
         else 
-            alu <= alu - bus;
+            alu <= alu_w - bus;
     end
 end
 
-always (mux_control) begin
+always @(posedge clk, mux_control) begin
     case (mux_control)
         10'b00_0000_0001: bus <= mux_in[0];
         10'b00_0000_0010: bus <= mux_in[1];

@@ -1,7 +1,7 @@
 module CU(clk, Run, Resetn, IR, IRin, R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in, Ain, Gin, R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, Gout, DINout, AddSub, enableALU, Done);
 
 
-parameter [2:0]  idle = 0, load_commRand = 1, move = 2, movei = 3, ar_op_load_op1 = 4, ar_op_mov_res_done = 5; 
+parameter [2:0]  idle = 0, load_command = 1, move = 2, movei = 3, ar_op_load_op1 = 4,ar_op_load_op2 = 5, ar_op_mov_res_done = 6; 
 parameter [2:0]  mv = 0, mvi = 1, add = 2, sub = 3; 
 
 input      clk, Run, Resetn;
@@ -25,6 +25,7 @@ wire [7:0] op2_decoder_out;
 decoder op1_decoder(op1,op1_decoder_out);
 decoder op2_decoder(op2,op2_decoder_out);
 
+reg change_state;
 
 assign R0out  =  mul_control[0];
 assign R1out  =  mul_control[1];
@@ -49,20 +50,22 @@ assign AddSub = command[1] & command[0];    //decodes wheter it`s adding or subs
 
 always @(posedge clk, negedge Resetn) begin
     if(~Resetn) begin
-        IRin <= 1'b1;
+        Done <= 1'b0;
+        IRin <= 1'b0;
         state <= idle;
     end
 end
 
 
-always
 
-always @(posedge clk, posedge Run) begin
-    if (Run && state == idle) begin
-        IRin <= 1'b1;
-        state <= load_command;     
+always @(posedge clk) begin
+    if (~Run != 1'b0 && state == idle) begin
+        Done <= 1'b0;
+        IRin  = 1'b1;
+        state = load_command;
     end
 end
+
 
 
 always @(posedge clk) begin
@@ -75,16 +78,15 @@ always @(posedge clk) begin
                 Gout <= 1'b0;
                 Gin <= 1'b0;
                 Ain <= 1'b0;
-                enableALU < 1'b0;
-                
+                enableALU <= 1'b0;     
         end
-
+        
         load_command: begin
-            IRin <= 1'b0;
-            command <= IR[8:6];
-            op1     <= IR[5:3];
-            op2     <= IR[2:0];
-            
+            command = IR[8:6];
+            op1     = IR[5:3];
+            op2     = IR[2:0];
+            IRin  = 1'b0;
+
             case (command)
                 mv:  state <= move;
                 mvi: state <= movei;
@@ -102,8 +104,8 @@ always @(posedge clk) begin
         end
 
         movei: begin
-                reg_control <= op1_decoder_out;     // allows to write date to this reg
                 DINout <= 1'b1;
+                reg_control <= op1_decoder_out;     // allows to write date to this reg
                 Done <= 1'b1;
                 state <= idle;
         end

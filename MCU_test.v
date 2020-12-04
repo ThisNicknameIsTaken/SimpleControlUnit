@@ -12,7 +12,9 @@ wire Done;
 wire [15:0] bus;
 
 
-MCU mcu(Mclk, Pclk,Resetn,Run,Done,Bus);
+wire [3:0] counter;
+
+MCU mcu(Mclk, Pclk,Resetn,Run,Done,bus,counter);
 
 initial begin
     Mclk = 1'b0;
@@ -31,9 +33,19 @@ always begin
 end
 
 
+initial begin
+    #60 Run = 1'b1;
+    #P_PERIOD Run = 1'b0;
+end
+
 always begin
     #P_PERIOD Pclk = ~Pclk;
 end
 
+
+always @(counter) begin
+    if(&counter)
+            $finish;
+end
 
 endmodule
