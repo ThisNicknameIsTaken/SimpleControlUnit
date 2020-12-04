@@ -17,6 +17,7 @@ reg [15:0] alu;
 
 wire enableALU;
 wire [15:0] alu_w;
+wire [15:0] bus_to_alu;
 
 Register R0(clk, R0in, bus, mux_in[0]);
 Register R1(clk, R1in, bus, mux_in[1]);
@@ -30,6 +31,7 @@ Register A (clk, Ain,  bus, alu_w);
 Register G (clk, Gin,  alu, mux_in[8]);
 
 assign bus_w = bus;
+assign bus_to_alu = bus;
 
 reg [8:0]  IR;
 wire IRin;
@@ -78,13 +80,13 @@ end
 always @(R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, Gout, DINout)
     mux_control <= {DINout,Gout, R7out, R6out, R5out, R4out, R3out, R2out, R1out, R0out};
 
-always @(enableALU) begin
-    if(enableALU) begin
+always @(*) begin
+ 
         if(AddSub == 1'b0)
-            alu <= alu_w + bus;
+            alu = (alu_w + bus_to_alu);
         else 
-            alu <= alu_w - bus;
-    end
+            alu = (alu_w - bus_to_alu);
+   
 end
 
 always @(posedge clk, mux_control) begin

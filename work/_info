@@ -10,23 +10,23 @@ z2
 cModel Technology
 Z0 dD:/ModelSim/Projects/Lab8
 vCU
-Z1 !s110 1607113776
+Z1 !s110 1607118772
 !i10b 1
-!s100 cFXYi;jNCzRSmf;]?dMC41
+!s100 _27YEE8BG3G1LeT2FJD[B1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IF:aZO23_[8E`1;P9><>[X3
+IW`zTWHMd[l<d>6a[OXJb:2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1607113770
+w1607116653
 8CU.v
 FCU.v
 !i122 0
-L0 1 140
+L0 1 148
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1607113776.000000
+Z5 !s108 1607118772.000000
 !s107 MCU_test.v|CU.v|Register.v|decoder.v|rom.v|SCU.v|MCU.v|
 Z6 !s90 -reportprogress|300|MCU.v|SCU.v|rom.v|decoder.v|Register.v|CU.v|MCU_test.v|
 !i113 1
@@ -148,16 +148,16 @@ R7
 vSCU
 R1
 !i10b 1
-!s100 IJ_DkzeBBPL4lW1P0Uha31
+!s100 6bz`lKeC^ODk;13dRg7_11
 R2
-IFGFl<m5di7Y4a^FJN<X3z1
+IaE1d;Zk2?nm5I=bz3Wf600
 R3
 R0
-w1607113410
+w1607118753
 8SCU.v
 FSCU.v
 !i122 0
-L0 1 105
+L0 1 107
 R4
 r1
 !s85 0

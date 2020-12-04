@@ -15,7 +15,8 @@ output  reg enableALU;
 reg [7:0] mul_control;     //choose from which register read data
 reg [7:0] reg_control;     //choose to which register write data
 
-reg  [2:0] state;
+reg  [2:0] current_state;
+reg  [2:0] next_state;
 
 reg [2:0] command;
 reg [2:0] op1, op2;
@@ -48,28 +49,31 @@ assign R7in   =  reg_control[7];
 
 assign AddSub = command[1] & command[0];    //decodes wheter it`s adding or substraction operation
 
+
+
 always @(posedge clk, negedge Resetn) begin
     if(~Resetn) begin
+        current_state <= idle;
+        next_state <= idle;
         Done <= 1'b0;
         IRin <= 1'b0;
-        state <= idle;
-    end
+    end else
+        current_state <= next_state;
 end
 
 
-
-always @(posedge clk) begin
-    if (~Run != 1'b0 && state == idle) begin
-        Done <= 1'b0;
-        IRin  = 1'b1;
-        state = load_command;
-    end
-end
-
+//always @(posedge clk) begin
+  //  if (~Run != 1'b0 && state == idle) begin
+    //    Done <= 1'b0;
+      //  IRin  = 1'b1;
+        //state = load_command;
+   // end
+//end
 
 
-always @(posedge clk) begin
-     case (state)
+
+always @(*) begin
+     case (current_state)
         idle: begin
                 Done <= 1'b0;
                 mul_control <= 8'b0000_0000;
@@ -79,6 +83,9 @@ always @(posedge clk) begin
                 Gin <= 1'b0;
                 Ain <= 1'b0;
                 enableALU <= 1'b0;     
+            
+            if(Run)
+                next_state <= load_command;
         end
         
         load_command: begin
@@ -88,11 +95,11 @@ always @(posedge clk) begin
             IRin  = 1'b0;
 
             case (command)
-                mv:  state <= move;
-                mvi: state <= movei;
-                add: state <= ar_op_load_op1;
-                sub: state <= ar_op_load_op1;
-                default: state <= idle;
+                mv:  next_state <= move;
+                mvi: next_state <= movei;
+                add: next_state <= ar_op_load_op1;
+                sub: next_state <= ar_op_load_op1;
+                default: next_state <= idle;
             endcase
         end
 
@@ -100,29 +107,29 @@ always @(posedge clk) begin
                 reg_control <= op1_decoder_out;     // allows to write date to this reg
                 mul_control <= op2_decoder_out;     // allows to read data from this reg
                 Done <= 1'b1;
-                state <= idle;
+                next_state <= idle;
         end
 
         movei: begin
                 DINout <= 1'b1;
                 reg_control <= op1_decoder_out;     // allows to write date to this reg
                 Done <= 1'b1;
-                state <= idle;
+                next_state <= idle;
         end
 
         ar_op_load_op1: begin
                 Ain <= 1'b1;
                 mul_control <= op1_decoder_out;     // allows to read data from this reg
-                state <= ar_op_load_op2;
+                next_state <= ar_op_load_op2;
         end
 
         
         ar_op_load_op2: begin
                 Ain <= 1'b0;
                 mul_control <= op2_decoder_out;     // allows to read data from this reg
-                Gin <= 1'b1;
+                Gin <= 1'b1;                        // write to G
                 enableALU <= 1'b1;
-                state <= ar_op_mov_res_done;
+                next_state <= ar_op_mov_res_done;
         end
 
         ar_op_mov_res_done: begin
@@ -131,7 +138,7 @@ always @(posedge clk) begin
                 mul_control <= 8'b0000_0000;
                 reg_control <= op1_decoder_out;
                 Done <= 1'b1;
-                state <= idle;
+                next_state <= idle;
         end
 
     endcase

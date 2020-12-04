@@ -30,7 +30,8 @@ add wave /MCU_test/mcu/run_r
 add wave /MCU_test/Done
 add wave /MCU_test/bus
 
-add wave /MCU_test/mcu/scu/control_unit/state
+add wave /MCU_test/mcu/scu/control_unit/current_state
+add wave /MCU_test/mcu/scu/control_unit/next_state
 add wave /MCU_test/mcu/scu/IR
 add wave /MCU_test/mcu/scu/control_unit/IR
 add wave /MCU_test/mcu/scu/control_unit/IRin
@@ -51,7 +52,10 @@ add wave /MCU_test/mcu/scu/R5/data
 add wave /MCU_test/mcu/scu/R6/data
 add wave /MCU_test/mcu/scu/R7/data
 add wave /MCU_test/mcu/scu/A/data
+add wave /MCU_test/mcu/scu/alu_w
 add wave /MCU_test/mcu/scu/G/data
+add wave /MCU_test/mcu/scu/bus_to_alu
+add wave /MCU_test/mcu/scu/alu
 
 add wave /MCU_test/mcu/scu/Din
 add wave /MCU_test/mcu/scu/R0in
